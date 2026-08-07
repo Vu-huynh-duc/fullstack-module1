@@ -4,7 +4,7 @@ import path from "path";
 
 
 export default defineConfig ({
-    base: process.env.NODE_ENV === "production" ? "/fullstack-module1" : "/",
+    base: process.env.NODE_ENV === "production" ? "/fullstack-module1/" : "/",
     root: "src",
     publicDir: "../public",
     build: {
