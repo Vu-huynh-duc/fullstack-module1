@@ -1,24 +1,28 @@
 @use "./reset";
 
+/* ----------------Layout---------------------- */ 
 
-// Layout
+// @use "./layout/grid";
+@use "./layout/grid3";
 
-@use "./layout/grid";
 @use "./layout/header";
 @use "./layout/footer";
 
-// Pages
+/* ----------------Pages---------------------- */ 
 
 @use "./pages/home";
 @use "./pages/about";
 
-// Components
+/* ----------------Components---------------------- */
 
 @use "./components/buttons";
 @use "./components/toast";
 
+/* ----------------Variables---------------------- */
 
-// Common
+@use "./variables";
+
+/* ----------------Common---------------------- */
 
 * {
     box-sizing: border-box;
@@ -50,4 +54,14 @@ a {
     color: inherit;
 }
 
+/* ----------------CSS---------------------- */
 
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    background-color: orange;
+    height: 100px;
+    width: 100%;
+}

@@ -1,13 +1,30 @@
 {
+  "name": "html-fullstack-f8",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Vu-huynh-duc/fullstack-module1#readme",
+  "bugs": {
+    "url": "https://github.com/Vu-huynh-duc/fullstack-module1/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vu-huynh-duc/fullstack-module1.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "vite.config.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "vite build && gh-pages -d dist"
+    "deploy": "vite build && gh-pages -d dist",
+    "start": "sass src/scss/main.scss output/css.css -w"
   },
   "dependencies": {
     "gh-pages": "^6.3.0",
     "sass": "^1.102.0",
     "vite": "^8.2.0",
     "vite-plugin-ejs": "^2.0.0"
-  }
+  },
+  "devDependencies": {}
 }

@@ -1,0 +1,268 @@
+$grid-columns: 12;
+$grid-gutter-width: 3rem;
+
+$gutters: (
+    0: 0,
+    1: 0.25,
+    2: 0.5,
+    3: 1,
+    4: 1.5,
+    5: 3,
+);
+
+
+.container {
+    --grid-gutter-x: #{$grid-gutter-width};
+    --grid-gutter-y: 0;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: calc(var(--grid-gutter-x) * 0.5);
+    padding-right: calc(var(--grid-gutter-x) * 0.5);
+
+}
+
+.container-fluid {
+    --grid-gutter-x: #{$grid-gutter-width};
+    --grid-gutter-y: 0;
+    width: 100%;
+    padding-left: calc(var(--grid-gutter-x) * 0.5);
+    padding-right: calc(var(--grid-gutter-x) * 0.5);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--grid-gutter-y) * -1);
+    margin-left: calc(var(--grid-gutter-x) * -0.5);
+    margin-right: calc(var(--grid-gutter-x) * -0.5);
+
+    > * {
+        margin-top: var(--grid-gutter-y);
+        padding-left: calc(var(--grid-gutter-x) * 0.5);
+        padding-right: calc(var(--grid-gutter-x) * 0.5);
+    }
+}
+
+.col {
+    flex: 1 0 auto;
+    
+}
+
+@for $i from 1 through $grid-columns * 0.5 {
+    .row-cols-#{$i} > * {
+        width: calc(100% / $i);
+    }
+}
+
+@for $i from 1 through $grid-columns {
+    .col-#{$i} {
+        flex: 0 0 auto;
+        width: calc(100% / $grid-columns * $i);
+    }
+}
+
+
+@each $key, $scale in $gutters {
+    .gx-#{$key},
+    .g-#{$key} {
+        --grid-gutter-x: calc(#{$grid-gutter-width} * #{$scale});
+    }
+
+    .gy-#{$key},
+    .g-#{$key} {
+        --grid-gutter-y: calc(#{$grid-gutter-width} * #{$scale});
+    }
+}
+
+@for $i from 0 to $grid-columns {
+    .offset-#{$i} {
+        margin-left: calc(100% / $grid-columns * #{$i});
+    }
+}
+
+
+/* xl */ 
+@media (max-width: 1399.98px) {
+    .container {
+        max-width: 1140px
+    }
+
+    @for $i from 1 through $grid-columns * 0.5 {
+    .row-cols-xl-#{$i} > * {
+        width: calc(100% / $i);
+    }
+    }
+
+    @for $i from 1 through $grid-columns {
+    .col-xl-#{$i} {
+        flex: 0 0 auto;
+        width: calc(100% / $grid-columns * $i);
+    }
+    }
+    
+    @each $key, $scale in $gutters {
+    .gx-xl-#{$key},
+    .g-xl-#{$key} {
+        --grid-gutter-x: calc(#{$grid-gutter-width} * #{$scale});
+    }
+
+    .gy-xl-#{$key},
+    .g-xl-#{$key} {
+        --grid-gutter-y: calc(#{$grid-gutter-width} * #{$scale});
+    }
+    }
+    @for $i from 0 to $grid-columns {
+    .offset-xl-#{$i} {
+        margin-left: calc(100% / $grid-columns * #{$i});
+    }
+    }
+}
+
+/* lg */ 
+@media (max-width: 1199.98px) {
+    .container {
+        max-width: 960px
+    }
+
+    @for $i from 1 through $grid-columns * 0.5 {
+    .row-cols-lg-#{$i} > * {
+        width: calc(100% / $i);
+    }
+    }
+
+    @for $i from 1 through $grid-columns {
+    .col-lg-#{$i} {
+        flex: 0 0 auto;
+        width: calc(100% / $grid-columns * $i);
+    }
+    }
+    
+    @each $key, $scale in $gutters {
+    .gx-lg-#{$key},
+    .g-lg-#{$key} {
+        --grid-gutter-x: calc(#{$grid-gutter-width} * #{$scale});
+    }
+    .gy-lg-#{$key},
+    .g-lg-#{$key} {
+        --grid-gutter-y: calc(#{$grid-gutter-width} * #{$scale});
+    }
+    }
+    @for $i from 0 to $grid-columns {
+    .offset-lg-#{$i} {
+        margin-left: calc(100% / $grid-columns * #{$i});
+    }
+    }
+}
+
+/* md */ 
+
+@media (max-width: 991.98px) {
+    .container {
+        max-width: 720px
+    }
+
+    @for $i from 1 through $grid-columns * 0.5 {
+    .row-cols-md-#{$i} > * {
+        width: calc(100% / $i);
+    }
+    }
+
+    @for $i from 1 through $grid-columns {
+    .col-md-#{$i} {
+        flex: 0 0 auto;
+        width: calc(100% / $grid-columns * $i);
+    }
+    }
+    
+    @each $key, $scale in $gutters {
+    .gx-md-#{$key},
+    .g-md-#{$key} {
+        --grid-gutter-x: calc(#{$grid-gutter-width} * #{$scale});
+    }
+    .gy-md-#{$key},
+    .g-md-#{$key} {
+        --grid-gutter-y: calc(#{$grid-gutter-width} * #{$scale});
+    }
+    }
+    @for $i from 0 to $grid-columns {
+    .offset-md-#{$i} {
+        margin-left: calc(100% / $grid-columns * #{$i});
+    }
+    }
+}
+
+/* sm */ 
+
+@media (max-width: 767.98px) {
+    .container {
+        max-width: 540px
+    }
+
+    @for $i from 1 through $grid-columns * 0.5 {
+    .row-cols-sm-#{$i} > * {
+        width: calc(100% / $i);
+    }
+    }
+
+    @for $i from 1 through $grid-columns {
+    .col-sm-#{$i} {
+        flex: 0 0 auto;
+        width: calc(100% / $grid-columns * $i);
+    }
+    }
+    
+    @each $key, $scale in $gutters {
+    .gx-sm-#{$key},
+    .g-sm-#{$key} {
+        --grid-gutter-x: calc(#{$grid-gutter-width} * #{$scale});
+    }
+    .gy-sm-#{$key},
+    .g-sm-#{$key} {
+        --grid-gutter-y: calc(#{$grid-gutter-width} * #{$scale});
+    }
+    }
+    @for $i from 0 to $grid-columns {
+    .offset-sm-#{$i} {
+        margin-left: calc(100% / $grid-columns * #{$i});
+    }
+    }
+}
+
+/* xs */ 
+
+@media (max-width: 575.98px) {
+    .container {
+        max-width: 100%
+    }
+    
+    @for $i from 1 through $grid-columns * 0.5 {
+    .row-cols-xs-#{$i} > * {
+        width: calc(100% / $i);
+    }
+    }
+
+    @for $i from 1 through $grid-columns {
+    .col-xs-#{$i} {
+        flex: 0 0 auto;
+        width: calc(100% / $grid-columns * $i);
+    }
+    }
+    
+    @each $key, $scale in $gutters {
+    .gx-xs-#{$key},
+    .g-xs-#{$key} {
+        --grid-gutter-x: calc(#{$grid-gutter-width} * #{$scale});
+    }
+    .gy-xs-#{$key},
+    .g-xs-#{$key} {
+        --grid-gutter-y: calc(#{$grid-gutter-width} * #{$scale});
+    }
+    }
+    @for $i from 0 to $grid-columns {
+    .offset-xs-#{$i} {
+        margin-left: calc(100% / $grid-columns * #{$i});
+    }
+    }
+}
+

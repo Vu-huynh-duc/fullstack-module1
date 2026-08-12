@@ -10,6 +10,7 @@ export default defineConfig ({
     build: {
         outDir: "../dist",
         emptyOutDir: true,
+        sourcemap: true,
         rollupOptions: {
             input: {
                 index: path.resolve(__dirname, "src/index.html"),
