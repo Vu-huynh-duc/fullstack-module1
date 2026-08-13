@@ -1,6 +1,6 @@
 @use "sass:map";
 @use "sass:math";
-@use "../variables";
+@use "../abstracts/variables";
 
 $container-max-widths: (
     sm: 100%,
