@@ -1,0 +1,17 @@
+.logo {
+    align-items: center;
+    display: flex;
+    gap: 14px;
+}
+
+.logo__image {
+    width: 32px;
+}
+
+.logo__desc {
+    text-decoration: none;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.45;
+}

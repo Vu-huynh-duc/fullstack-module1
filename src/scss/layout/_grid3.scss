@@ -21,6 +21,7 @@ $container-max-widths: (
   md: 720px,
   lg: 960px,
   xl: 1140px,
+  xxl: 1370px,
 );
 
 %gutter-padding {
@@ -31,7 +32,7 @@ $container-max-widths: (
 .container-fluid {    
     --grid-gutter-x: #{$grid-gutter-width};
     --grid-gutter-y: 0;
-    max-width: 1320px;
+    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
     @extend %gutter-padding
