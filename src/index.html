@@ -8,62 +8,12 @@
     </head>
     <body>
         <%-include("./partials/header.ejs") %>
-        <div class="music-player">
-            <!-- ================= PLAYER ================= -->
-            <section class="player">
-                <p class="now-playing">Now playing:</p>
-
-                <h1 class="song-title">String 57th & 9th</h1>
-
-                <div class="album-wrapper">
-                    <div class="album">
-                        <img
-                            src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=500"
-                            alt="Album"
-                        />
-
-                        <div class="album-text">FOR1</div>
-                    </div>
-                </div>
-
-                <!-- Controls -->
-                <div class="controls">
-                    <button class="control-btn loop">
-                        <i class="fa-solid fa-rotate-left"></i>
-                    </button>
-
-                    <button class="control-btn pre">
-                        <i class="fa-solid fa-backward-step"></i>
-                    </button>
-
-                    <button class="play-btn">
-                        <i class="fa-solid fa-play"></i>
-                    </button>
-
-                    <button class="control-btn next">
-                        <i class="fa-solid fa-forward-step"></i>
-                    </button>
-
-                    <button class="control-btn shuffle">
-                        <i class="fa-solid fa-shuffle"></i>
-                    </button>
-                </div>
-
-                <!-- Progress -->
-                <div class="progress-container">
-                    <div class="progress-bar">
-                        <div class="progress"></div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ================= SONG LIST ================= -->
-            <section class="playlist">
-            </section>
-
-            <audio class="song-mp3" src=""></audio>
-        </div>
-
+            <div class="container">                    
+                <div class="productsList">
+                    <div class="row g-3 row-cols-6 row-cols-xl-6 row-cols-lg-4 row-cols-md-3 row-cols-sm-2"></div>
+                </div> 
+            </div>            
+                
         <%-include("./partials/footer.ejs") %>
         <script type="module" src="./main.js"></script>
     </body>

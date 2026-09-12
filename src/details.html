@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grocerymart</title>
+        <%-include("./partials/head.ejs") %>
+    </head>
+    <body>
+        <%-include("./partials/header.ejs") %>
+        <div class="container">
+            <div class="productDetail">
+                <h1 class="productTitle"></h1>
+
+                <img class="productImage" src="" alt="" />
+
+                <p class="productDescription"></p>
+
+                <p>
+                    Price:
+                    <span class="productPrice"></span>
+                </p>
+
+                <p>
+                    Category:
+                    <span class="productCategory"></span>
+                </p>
+
+                <p>
+                    Rating:
+                    <span class="productRating"></span>
+                </p>
+
+                <p>
+                    Stock:
+                    <span class="productStock"></span>
+                </p>
+            </div>
+        </div>
+
+        <%-include("./partials/footer.ejs") %>
+        <script type="module" src="./details.js"></script>
+    </body>
+</html>
