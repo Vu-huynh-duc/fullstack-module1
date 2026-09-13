@@ -7,16 +7,25 @@ const $$ = document.querySelectorAll.bind(document)
 const productsList = $(".productsList")
 const productsListRow = productsList.querySelector(".row")
 
+const worker1 = new Worker("./worker.js")
+
 async function start() {
     const response = await fetch("https://dummyjson.com/products")
     
-    const data =  JSON.parse(await response.text()).products
-    console.log(data)
+    const data =  await response.json()
+
+    worker1.postMessage(data.products)
     
-    data.forEach(item => {
+}
+start()
+
+worker1.onmessage = (e) => {
+      const products = e.data
+      const fragment = document.createDocumentFragment()
+
+      products.forEach(item => {
             const productCol = document.createElement('div')            
-            productCol.classList.add("col")
-            
+            productCol.classList.add("col")            
 
             const product = document.createElement('div')
             product.innerText = item.title
@@ -24,16 +33,20 @@ async function start() {
 
             product.dataset.id = item.id
 
-
-
-            productsListRow.appendChild(productCol)
+            
             productCol.appendChild(product)
-
-            product.addEventListener("click", () => {
-            window.location.href = `details.html?id=${item.id}`
-            })
+            fragment.appendChild(productCol)
         })
+      productsListRow.appendChild(fragment)
 }
 
-start()
+
+productsListRow.onclick = (e) => {
+  if(e.target.closest(".product")) {
+    const product = e.target.closest(".product")
+    window.location.href = `details.html?id=${product.dataset.id}`
+  }
+}
+
+
 
