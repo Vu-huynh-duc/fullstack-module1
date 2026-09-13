@@ -8,11 +8,12 @@
     </head>
     <body>
         <%-include("./partials/header.ejs") %>
-            <div class="container">                    
-                <div class="productsList">
-                    <div class="row g-3 row-cols-6 row-cols-xl-6 row-cols-lg-4 row-cols-md-3 row-cols-sm-2"></div>
-                </div> 
-            </div>            
+            <form action="" class="formTodo">
+                <input type="text" class="inputTodo">
+                <button class = "btnTodo">Add task</button>
+
+            </form> 
+            <ul class="tasksList"></ul>         
                 
         <%-include("./partials/footer.ejs") %>
         <script type="module" src="./main.js"></script>

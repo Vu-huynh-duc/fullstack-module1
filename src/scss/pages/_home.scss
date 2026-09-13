@@ -1,20 +1,114 @@
-.productsList {
-    margin-top: 30px;
-    
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #f5f5f5;
 }
 
-.product {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    height: 100px;
-    background-color: beige;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    cursor: pointer;
+.formTodo {
+    width: 500px;
+    margin: 50px auto 30px;
 
-    &:hover {
-        background-color: #ccc;
+    display: flex;
+    gap: 10px;
+
+    .inputTodo {
+        flex: 1;
+        height: 45px;
+        padding: 0 15px;
+
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        outline: none;
+
+        font-size: 16px;
+        background: #fff;
+
+        transition: 0.2s;
+
+        &::placeholder {
+            color: #aaa;
+        }
+
+        &:focus {
+            border-color: #666;
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+        }
+    }
+
+    .btnTodo {
+        height: 45px;
+        padding: 0 20px;
+
+        border: none;
+        border-radius: 10px;
+
+        background: #222;
+        color: #fff;
+
+        font-size: 15px;
+        font-weight: 600;
+
+        cursor: pointer;
+
+        transition: 0.2s;
+
+        &:hover {
+            background: #444;
+            transform: translateY(-1px);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+}
+
+
+.tasksList {
+    width: 500px;
+    margin: 0 auto;
+    padding: 0;
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    li {
+        min-height: 45px;
+        padding: 12px 15px;
+
+        display: flex;
+        align-items: center;
+
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 10px;
+
+        font-size: 16px;
+
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+        transition: 0.2s;
+
+        &:hover {
+            border-color: #ddd;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+        }
+    }
+
+    .deleteTask {
+        background-color: #e84646;
+        color:#fff;
+        margin-left: auto;
+    }
+
+    .updateTask {
+        background-color: rgb(127, 167, 246);
+        padding: 5px;
+        margin-left: auto;
+        border-radius: 5px;
     }
 }

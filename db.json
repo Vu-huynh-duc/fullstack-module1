@@ -1,0 +1,26 @@
+{
+  "tasks": [
+    {
+      "name": "học nextJS",
+      "id": "2vnLdrlD_dc"
+    },
+    {
+      "name": "học react",
+      "id": "WqjrHffcr4w"
+    },
+    {
+      "name": "học html css",
+      "id": "9Z80xDYjfzk"
+    },
+    {
+      "name": "học javascript",
+      "id": "D42DzjZfCRw"
+    },
+    {
+      "name": "học nodeJS",
+      "id": "_TGMbXXCPPc"
+    }
+  ],
+  "person": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}
